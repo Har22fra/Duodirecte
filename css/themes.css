@@ -1,0 +1,145 @@
+/* ========================
+   THEMES
+   ======================== */
+
+/* Thème Duolingo */
+[data-theme="duolingo"] {
+    --primary: #58cc02;
+    --primary-light: #76db3d;
+    --primary-dark: #46a601;
+    --success: #1fc707;
+    --warning: #ff8c00;
+    --danger: #d61e3e;
+}
+
+/* Thème Pronote Bleu */
+[data-theme="pronote"] {
+    --primary: #0066cc;
+    --primary-light: #3385d6;
+    --primary-dark: #004d99;
+    --success: #0099cc;
+    --warning: #ff9900;
+}
+
+/* Thème École Directe */
+[data-theme="ecole-directe"] {
+    --primary: #1e3a8a;
+    --primary-light: #3b82f6;
+    --primary-dark: #1e40af;
+}
+
+/* Thème Cyberpunk */
+[data-theme="cyberpunk"] {
+    --primary: #ff006e;
+    --primary-light: #ff4d88;
+    --primary-dark: #c2004d;
+    --success: #00f5ff;
+    --warning: #ffbe0b;
+    --info: #8338ec;
+    --bg-primary: #0a0e27;
+    --bg-secondary: #1a1f3a;
+    --bg-tertiary: #282d45;
+    --text-primary: #00f5ff;
+    --text-secondary: #b0b5c0;
+    --border: #3d4d6b;
+}
+
+[data-theme="cyberpunk"] .card {
+    border: 2px solid var(--primary);
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, #1a2a3a 100%);
+}
+
+/* Thème Pastel */
+[data-theme="pastel"] {
+    --primary: #c75b8a;
+    --primary-light: #d97ba1;
+    --primary-dark: #a64470;
+    --success: #7ac943;
+    --warning: #f7b731;
+    --danger: #eb6b56;
+    --bg-primary: #faf8f3;
+    --bg-secondary: #f0ebe3;
+    --bg-tertiary: #e5dfd5;
+    --text-primary: #3a3a3a;
+    --text-secondary: #6b6b6b;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(99, 102, 241, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(99, 102, 241, 0.8);
+    }
+}
+
+/* Transitions entrée/sortie */
+.fade-in {
+    animation: fadeIn var(--transition-slow);
+}
+
+.slide-in {
+    animation: slideIn var(--transition-base);
+}
+
+.bounce {
+    animation: bounce var(--transition-base);
+}
+
+/* Scrollbar custom */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
